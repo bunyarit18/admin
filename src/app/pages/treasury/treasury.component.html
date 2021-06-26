@@ -1,0 +1,712 @@
+<div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-green navbar-light">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+        </ul>
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="../../../app/dashboard/index/index.component.html" class="brand-link">
+            <img src="../../../assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+            <span class="brand-text font-weight-light"> RONGRAM </span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Sidebar user (optional) -->
+            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                <div class="image">
+                    <img src="../../../assets/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                </div>
+                <div class="info">
+                    <a href="#" class="d-block"> Bunyarit Thongsuk </a>
+                </div>
+            </div>
+
+
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <!-- Add icons to the links using the .nav-icon class
+with font-awesome or any other icon font library -->
+                    <li class="nav-item">
+                        <a href="/dashboard" class="nav-link">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                หน้าหลัก
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/calendar" class="nav-link">
+                            <i class="nav-icon fas fa-edit"></i>
+                            <p>
+                                การจัดการห้องพัก
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/room" class="nav-link">
+                            <i class="nav-icon fas fa-table"></i>
+                            <p>
+                                ข้อมูลห้องพัก
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/staff" class="nav-link">
+                            <i class="nav-icon fas fa-columns"></i>
+                            <p>
+                                การจัดการพนักงาน
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/customer" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p>
+                                ข้อมูลลูกค้า
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/financial" class="nav-link">
+                            <i class="nav-icon fas fa-chart-pie"></i>
+                            <p>
+                                ข้อมูลการเงิน
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/treasury" class="nav-link active">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p>
+                                คลังสินค้า
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/list" class="nav-link">
+                            <i class="nav-icon fas fa-search"></i>
+                            <p>
+                                ประวัตการทำรายการ
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+    </aside>
+
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title"> การจัดการห้องพัก </h3>
+                            <div class="card-tools">
+                                <div class="input-group input-group-sm" style="width: 180px;">
+                                    <input type="text" name="table_search" class="form-control float-right" placeholder="หมายเลขห้อง">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-default">
+                        <i class="fas fa-search"></i>
+                      </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="card card-primary card-outline">
+                    <div class="card-body">
+                        <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="custom-content-below-home-tab" data-toggle="pill" href="#custom-content-below-home" role="tab" aria-controls="custom-content-below-home" aria-selected="true"> สินค้าอุปโภค </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="custom-content-below-profile-tab" data-toggle="pill" href="#custom-content-below-profile" role="tab" aria-controls="custom-content-below-profile" aria-selected="true"> สินค้าบริโภค  </a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="custom-content-below-tabContent">
+                            <div class="tab-pane fade show active" id="custom-content-below-home" role="tabpanel" aria-labelledby="custom-content-below-home-tab">
+                                <div class="card-body pb-0">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                                            <div class="card bg-light d-flex flex-fill">
+                                                <div class="card-header text-muted border-bottom-0">
+                                                    Digital Strategist
+                                                </div>
+                                                <div class="card-body pt-0">
+                                                    <div class="row">
+                                                        <div class="col-7">
+                                                            <h2 class="lead"><b> สบู่ก้อน </b></h2>
+                                                            <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                                <li class="small"><span class="fa-li"><i class="fas fa-clipboard-list"></i></span> จำนวนสินค้าทั้งหมด : 500</li>
+                                                                <li class="small"><span class="fa-li"><i class="	fas fa-hand-holding-usd"></i></span> คงเหลือ : 234 </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-5 text-center">
+                                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5kbw187ptSYGGKHNIXAP9IqdXKHnaxlHcS06j06TDdmYef8U8VeH7_5u--PBqDw4k_uc&usqp=CAU" alt="user-avatar" class="img-circle img-fluid">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-right">
+                                                        <a type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal"><i class="fas fa-boxes"></i> &nbsp; แก้ไขข้อมูล</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                                            <div class="card bg-light d-flex flex-fill">
+                                                <div class="card-header text-muted border-bottom-0">
+                                                    Digital Strategist
+                                                </div>
+                                                <div class="card-body pt-0">
+                                                    <div class="row">
+                                                        <div class="col-7">
+                                                            <h2 class="lead"><b> เจลอาบน้ำ </b></h2>
+                                                            <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                                <li class="small"><span class="fa-li"><i class="fas fa-clipboard-list"></i></span> จำนวนสินค้าทั้งหมด : 500</li>
+                                                                <li class="small"><span class="fa-li"><i class="	fas fa-hand-holding-usd"></i></span> คงเหลือ : 234 </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-5 text-center">
+                                                            <img src="https://secure.ap-tescoassets.com/assets/TH/564/8851989081564/ShotType1_540x540.jpg" width="200" height="400" alt="user-avatar" class="img-circle img-fluid">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-right">
+                                                        <a type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal"><i class="fas fa-boxes"></i> &nbsp; แก้ไขข้อมูล</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                                            <div class="card bg-light d-flex flex-fill">
+                                                <div class="card-header text-muted border-bottom-0">
+                                                    Digital Strategist
+                                                </div>
+                                                <div class="card-body pt-0">
+                                                    <div class="row">
+                                                        <div class="col-7">
+                                                            <h2 class="lead"><b> แชมพู </b></h2>
+                                                            <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                                <li class="small"><span class="fa-li"><i class="fas fa-clipboard-list"></i></span> จำนวนสินค้าทั้งหมด : 500</li>
+                                                                <li class="small"><span class="fa-li"><i class="	fas fa-hand-holding-usd"></i></span> คงเหลือ : 234 </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-5 text-center">
+                                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnAz1a92AwaxU28MgvEuLjHGVcnQxayaB7hA&usqp=CAU" alt="user-avatar" class="img-circle img-fluid">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-right">
+                                                        <a type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal"><i class="fas fa-boxes"></i> &nbsp; แก้ไขข้อมูล</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                                            <div class="card bg-light d-flex flex-fill">
+                                                <div class="card-header text-muted border-bottom-0">
+                                                    Digital Strategist
+                                                </div>
+                                                <div class="card-body pt-0">
+                                                    <div class="row">
+                                                        <div class="col-7">
+                                                            <h2 class="lead"><b> หมวกอาบน้ำ </b></h2>
+                                                            <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                                <li class="small"><span class="fa-li"><i class="fas fa-clipboard-list"></i></span> จำนวนสินค้าทั้งหมด : 500</li>
+                                                                <li class="small"><span class="fa-li"><i class="	fas fa-hand-holding-usd"></i></span> คงเหลือ : 234 </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-5 text-center">
+                                                            <img src="https://cf.shopee.co.th/file/d34a8194e967cb91a05e241c4ded266b" alt="user-avatar" class="img-circle img-fluid">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-right">
+                                                        <a type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal"><i class="fas fa-boxes"></i> &nbsp; แก้ไขข้อมูล</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                                            <div class="card bg-light d-flex flex-fill">
+                                                <div class="card-header text-muted border-bottom-0">
+                                                    Digital Strategist
+                                                </div>
+                                                <div class="card-body pt-0">
+                                                    <div class="row">
+                                                        <div class="col-7">
+                                                            <h2 class="lead"><b> ชุดแปรงสีฟัน/ยาสีฟัน </b></h2>
+                                                            <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                                <li class="small"><span class="fa-li"><i class="fas fa-clipboard-list"></i></span> จำนวนสินค้าทั้งหมด : 500</li>
+                                                                <li class="small"><span class="fa-li"><i class="	fas fa-hand-holding-usd"></i></span> คงเหลือ : 234 </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-5 text-center">
+                                                            <img src="https://secure.ap-tescoassets.com/assets/TH/687/8851007101687/ShotType1_540x540.jpg" alt="user-avatar" class="img-circle img-fluid">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-right">
+                                                        <a type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal"><i class="fas fa-boxes"></i> &nbsp; แก้ไขข้อมูล</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                                            <div class="card bg-light d-flex flex-fill">
+                                                <div class="card-header text-muted border-bottom-0">
+                                                    Digital Strategist
+                                                </div>
+                                                <div class="card-body pt-0">
+                                                    <div class="row">
+                                                        <div class="col-7">
+                                                            <h2 class="lead"><b> ผ้าขนหนู </b></h2>
+                                                            <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                                <li class="small"><span class="fa-li"><i class="fas fa-clipboard-list"></i></span> จำนวนสินค้าทั้งหมด : 500</li>
+                                                                <li class="small"><span class="fa-li"><i class="	fas fa-hand-holding-usd"></i></span> คงเหลือ : 234 </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-5 text-center">
+                                                            <img src="data:image/jpeg;base64,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"
+                                                                alt="user-avatar" class="img-circle img-fluid">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-right">
+                                                        <a type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal"><i class="fas fa-boxes"></i> &nbsp; แก้ไขข้อมูล</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                                            <div class="card bg-light d-flex flex-fill">
+                                                <div class="card-header text-muted border-bottom-0">
+                                                    Digital Strategist
+                                                </div>
+                                                <div class="card-body pt-0">
+                                                    <div class="row">
+                                                        <div class="col-7">
+                                                            <h2 class="lead"><b> รองเท้าอนามัย </b></h2>
+                                                            <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                                <li class="small"><span class="fa-li"><i class="fas fa-clipboard-list"></i></span> จำนวนสินค้าทั้งหมด : 500</li>
+                                                                <li class="small"><span class="fa-li"><i class="	fas fa-hand-holding-usd"></i></span> คงเหลือ : 234 </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-5 text-center">
+                                                            <img src="data:image/jpeg;base64,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"
+                                                                alt="user-avatar" class="img-circle img-fluid">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-right">
+                                                        <a type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal"><i class="fas fa-boxes"></i> &nbsp; แก้ไขข้อมูล</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                                            <div class="card bg-light d-flex flex-fill">
+                                                <div class="card-header text-muted border-bottom-0">
+                                                    Digital Strategist
+                                                </div>
+                                                <div class="card-body pt-0">
+                                                    <div class="row">
+                                                        <div class="col-7">
+                                                            <h2 class="lead"><b> หวี </b></h2>
+                                                            <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                                <li class="small"><span class="fa-li"><i class="fas fa-clipboard-list"></i></span> จำนวนสินค้าทั้งหมด : 500</li>
+                                                                <li class="small"><span class="fa-li"><i class="	fas fa-hand-holding-usd"></i></span> คงเหลือ : 234 </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-5 text-center">
+                                                            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBggIBwgICAgICAoHBwkICBsICQcKIB0iIhUdExUaHDQgJCYlJxMfITEhJTUrLi4uFx8zOD8tNygtLisBCgoKDgwNFQ8NDisdExkrLSsrKysrKysrKysrKzcrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAMgAyAMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABAUCAwYBB//EADwQAQABAgIDCQ0JAQAAAAAAAAABAhEDBBIhMQVRU2FzkpOhsRQiJDIzNGJxcoGRweETFUFCQ1Kio/DR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD7iAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACJmc3ODiaFOHpaomZ0rf7Y1d318F/Jrz8XzM7PFp/T0utHtPFs4FBM7vr4KOdd5Ofxfwppj3XlEmJ3qeheXmItq+FlE/BzldeJTTVTTaqYi8RaYTlNl5mcbDvwlNviuQAAAAAAAAAAAAAAAAAAAAVWfmmMzN7eLTtifkj6VG/T1wk5+q2YnvojVG2uaexH0/TjpJQYzVRv0fGXl7x+HFrvDPS9OOklht4/fe6jZl/L4fKU9q7UmX8vh8pT2rsAAAAAAAAAAAAAAAAAAAAFXnqrZme+tqp1aeij6Xpz0iRnpmMxOurZTsrimOto179XPhB5M+nPSMPnv7Wevfq58MVGeX8vh8pT2rtSZfy+FylK7AAAAAAAAAAAAAAAAAAAABV5+/dM+N4sb1kfXx/CG/PxfMzq/LT+j9p1tGjO9PQfVAm/H8IYM5if2/0MP9st1KNmX8vh8pT2rtSZby+FylK7AAAAAAAAAAAAAAAAAAAABVZ+L5mZ0b97GuKJnrR9H0f4zDfuhbumb6Pi0+NMxPUj3p38Pn1Qg9mn0f4yxL079HPl5/o1361G3LecYXKUrtSZXzjC5SldgAAAAAAAAAAAAAAAAAAAAqs/VEZme+iO9p24k0/JG044SPdiz/xJz9VszMaUx3saoxNHqR9Kf31dLAPNOOE/t+jHbx++92c1T+6rpIlrmfrxg3ZXzjC9uldqPKecYXKQvAAAAAAAAAAAAAAAAAAAAAVWfrtmaovVGqnZVaEb7SN+vnMt05tnMT1U9iLpAkTiRP5q+c1zOtq0iKgSsnPhOF7dK9UGSnwrB9ulfgAAAAAAAAAAAAAAAAAAAA5/dWbZ7E9VHYiaSRuxqz+L6qOyEK6jbc0mu+r1lxE3IT4Zg+3DonM7nT4bg8pDpkUAAAAAAAAAAAAAAAAAAABTbp7nZnHzM4uBGHVTXFN4qr0JiUP7qz/BYXTfR0oDnI3LzlteDTfix4j5H3VneDw+m+jowFJkty8xh4+HXi/Z0xRXFeqvSmepdgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//Z"
+                                                                alt="user-avatar" class="img-circle img-fluid">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-right">
+                                                        <a type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal"><i class="fas fa-boxes"></i> &nbsp; แก้ไขข้อมูล</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                                            <div class="card bg-light d-flex flex-fill">
+                                                <div class="card-header text-muted border-bottom-0">
+                                                    Digital Strategist
+                                                </div>
+                                                <div class="card-body pt-0">
+                                                    <div class="row">
+                                                        <div class="col-7">
+                                                            <h2 class="lead"><b> กระดาษทิชชู่ </b></h2>
+                                                            <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                                <li class="small"><span class="fa-li"><i class="fas fa-clipboard-list"></i></span> จำนวนสินค้าทั้งหมด : 500</li>
+                                                                <li class="small"><span class="fa-li"><i class="	fas fa-hand-holding-usd"></i></span> คงเหลือ : 234 </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-5 text-center">
+                                                            <img src="https://i1.wp.com/www.imarketthailand.com/wp-content/uploads/2020/04/%E0%B8%81%E0%B8%A5%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B2%E0%B8%A9%E0%B8%97%E0%B8%B4%E0%B8%8A%E0%B8%8A%E0%B8%B9%E0%B9%84%E0%B8%A1%E0%B9%89-1.jpg?fit=600%2C600&ssl=1"
+                                                                alt="user-avatar" class="img-circle img-fluid">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-right">
+                                                        <a type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal"><i class="fas fa-boxes"></i> &nbsp; แก้ไขข้อมูล</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                                <div class="card-footer">
+                                    <nav aria-label="Contacts Page Navigation">
+                                        <ul class="pagination justify-content-center m-0">
+                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!-- /.card-footer -->
+                            </div>
+
+
+
+
+                            <div class="tab-pane fade" id="custom-content-below-profile" role="tabpanel" aria-labelledby="custom-content-below-profile-tab">
+                                <header class="w3-display-container w3-center">
+                                    <div class="mySlides w3-animate-opacity">
+                                        <div class="card-body pb-0">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                                                    <div class="card bg-light d-flex flex-fill">
+                                                        <div class="card-header text-muted border-bottom-0">
+                                                            Digital Strategist
+                                                        </div>
+                                                        <div class="card-body pt-0">
+                                                            <div class="row">
+                                                                <div class="col-7">
+                                                                    <h2 class="lead"><b>CoCa Cola (โค๊ก) </b></h2>
+                                                                    <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                                    <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                                        <li class="small"><span class="fa-li"><i class="fas fa-clipboard-list"></i></span> จำนวนสินค้าทั้งหมด : 500</li>
+                                                                        <li class="small"><span class="fa-li"><i class="	fas fa-hand-holding-usd"></i></span> คงเหลือ : 234 </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-5 text-center">
+                                                                    <img src="https://cf.shopee.co.th/file/3d454cb2411e6fe6d1db3d5b06d2cf6f" alt="user-avatar" class="img-circle img-fluid">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <div class="text-right">
+                                                                <a type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal"><i class="fas fa-boxes"></i> &nbsp; แก้ไขข้อมูล</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                                                    <div class="card bg-light d-flex flex-fill">
+                                                        <div class="card-header text-muted border-bottom-0">
+                                                            Digital Strategist
+                                                        </div>
+                                                        <div class="card-body pt-0">
+                                                            <div class="row">
+                                                                <div class="col-7">
+                                                                    <h2 class="lead"><b> น้ำเปล่า </b></h2>
+                                                                    <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                                    <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                                        <li class="small"><span class="fa-li"><i class="fas fa-clipboard-list"></i></span> จำนวนสินค้าทั้งหมด : 500</li>
+                                                                        <li class="small"><span class="fa-li"><i class="	fas fa-hand-holding-usd"></i></span> คงเหลือ : 234 </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-5 text-center">
+                                                                    <img src="https://cf.shopee.co.th/file/af63f347a7319835093e4d9c779294b7" alt="user-avatar" class="img-circle img-fluid">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <div class="text-right">
+                                                                <a type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal"><i class="fas fa-boxes"></i> &nbsp; แก้ไขข้อมูล</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                                                    <div class="card bg-light d-flex flex-fill">
+                                                        <div class="card-header text-muted border-bottom-0">
+                                                            Digital Strategist
+                                                        </div>
+                                                        <div class="card-body pt-0">
+                                                            <div class="row">
+                                                                <div class="col-7">
+                                                                    <h2 class="lead"><b> น้ำผลไม้ </b></h2>
+                                                                    <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                                    <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                                        <li class="small"><span class="fa-li"><i class="fas fa-clipboard-list"></i></span> จำนวนสินค้าทั้งหมด : 500</li>
+                                                                        <li class="small"><span class="fa-li"><i class="	fas fa-hand-holding-usd"></i></span> คงเหลือ : 234 </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-5 text-center">
+                                                                    <img src="https://aumento.officemate.co.th/media/catalog/product/0/0/0081710.jpg" alt="user-avatar" class="img-circle img-fluid">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <div class="text-right">
+                                                                <a type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal"><i class="fas fa-boxes"></i> &nbsp; แก้ไขข้อมูล</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                                                    <div class="card bg-light d-flex flex-fill">
+                                                        <div class="card-header text-muted border-bottom-0">
+                                                            Digital Strategist
+                                                        </div>
+                                                        <div class="card-body pt-0">
+                                                            <div class="row">
+                                                                <div class="col-7">
+                                                                    <h2 class="lead"><b> ชุดกาแฟ / โอวันติน </b></h2>
+                                                                    <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                                    <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                                        <li class="small"><span class="fa-li"><i class="fas fa-clipboard-list"></i></span> จำนวนสินค้าทั้งหมด : 500</li>
+                                                                        <li class="small"><span class="fa-li"><i class="	fas fa-hand-holding-usd"></i></span> คงเหลือ : 234 </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-5 text-center">
+                                                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvxftESoqpWhbYvs4ovhQaoSKceMQAGP7HBQ&usqp=CAU" alt="user-avatar" class="img-circle img-fluid">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <div class="text-right">
+                                                                <a type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal"><i class="fas fa-boxes"></i> &nbsp; แก้ไขข้อมูล</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                                                    <div class="card bg-light d-flex flex-fill">
+                                                        <div class="card-header text-muted border-bottom-0">
+                                                            Digital Strategist
+                                                        </div>
+                                                        <div class="card-body pt-0">
+                                                            <div class="row">
+                                                                <div class="col-7">
+                                                                    <h2 class="lead"><b> เบียร์ </b></h2>
+                                                                    <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                                    <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                                        <li class="small"><span class="fa-li"><i class="fas fa-clipboard-list"></i></span> จำนวนสินค้าทั้งหมด : 500</li>
+                                                                        <li class="small"><span class="fa-li"><i class="	fas fa-hand-holding-usd"></i></span> คงเหลือ : 234 </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-5 text-center">
+                                                                    <img src="https://mukda789.com/upload-img/Mukda/Product/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%94%E0%B8%B7%E0%B9%88%E0%B8%A1/%E0%B8%AA%E0%B8%B8%E0%B8%A3%E0%B8%B2-%E0%B9%80%E0%B8%9A%E0%B8%B5%E0%B8%A2%E0%B8%A3%E0%B9%8C-%E0%B8%9A%E0%B8%B8%E0%B8%AB%E0%B8%A3%E0%B8%B5%E0%B9%88/28.jpg"
+                                                                        alt="user-avatar" class="img-circle img-fluid">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <div class="text-right">
+                                                                <a type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal"><i class="fas fa-boxes"></i> &nbsp; แก้ไขข้อมูล</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                                                    <div class="card bg-light d-flex flex-fill">
+                                                        <div class="card-header text-muted border-bottom-0">
+                                                            Digital Strategist
+                                                        </div>
+                                                        <div class="card-body pt-0">
+                                                            <div class="row">
+                                                                <div class="col-7">
+                                                                    <h2 class="lead"><b> โออิชิน้ำผึ่งมะนาว </b></h2>
+                                                                    <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                                    <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                                        <li class="small"><span class="fa-li"><i class="fas fa-clipboard-list"></i></span> จำนวนสินค้าทั้งหมด : 500</li>
+                                                                        <li class="small"><span class="fa-li"><i class="	fas fa-hand-holding-usd"></i></span> คงเหลือ : 234 </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-5 text-center">
+                                                                    <img src="data:image/jpeg;base64,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"
+                                                                        alt="user-avatar" class="img-circle img-fluid">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <div class="text-right">
+                                                                <a type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal"><i class="fas fa-boxes"></i> &nbsp; แก้ไขข้อมูล</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                                                    <div class="card bg-light d-flex flex-fill">
+                                                        <div class="card-header text-muted border-bottom-0">
+                                                            Digital Strategist
+                                                        </div>
+                                                        <div class="card-body pt-0">
+                                                            <div class="row">
+                                                                <div class="col-7">
+                                                                    <h2 class="lead"><b> โปเต้ </b></h2>
+                                                                    <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                                    <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                                        <li class="small"><span class="fa-li"><i class="fas fa-clipboard-list"></i></span> จำนวนสินค้าทั้งหมด : 500</li>
+                                                                        <li class="small"><span class="fa-li"><i class="	fas fa-hand-holding-usd"></i></span> คงเหลือ : 234 </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-5 text-center">
+                                                                    <img src="https://media.allonline.7eleven.co.th/pdmain/393295_010_Supermarket.jpg" alt="user-avatar" class="img-circle img-fluid">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <div class="text-right">
+                                                                <a type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal"><i class="fas fa-boxes"></i> &nbsp; แก้ไขข้อมูล</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                                                    <div class="card bg-light d-flex flex-fill">
+                                                        <div class="card-header text-muted border-bottom-0">
+                                                            Digital Strategist
+                                                        </div>
+                                                        <div class="card-body pt-0">
+                                                            <div class="row">
+                                                                <div class="col-7">
+                                                                    <h2 class="lead"><b> ฮานามิ </b></h2>
+                                                                    <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                                    <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                                        <li class="small"><span class="fa-li"><i class="fas fa-clipboard-list"></i></span> จำนวนสินค้าทั้งหมด : 500</li>
+                                                                        <li class="small"><span class="fa-li"><i class="	fas fa-hand-holding-usd"></i></span> คงเหลือ : 234 </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-5 text-center">
+                                                                    <img src="data:image/jpeg;base64,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"
+                                                                        alt="user-avatar" class="img-circle img-fluid">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <div class="text-right">
+                                                                <a type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal"><i class="fas fa-boxes"></i> &nbsp; แก้ไขข้อมูล</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                                                    <div class="card bg-light d-flex flex-fill">
+                                                        <div class="card-header text-muted border-bottom-0">
+                                                            Digital Strategist
+                                                        </div>
+                                                        <div class="card-body pt-0">
+                                                            <div class="row">
+                                                                <div class="col-7">
+                                                                    <h2 class="lead"><b> ชุดผลไม้รวม </b></h2>
+                                                                    <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                                    <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                                        <li class="small"><span class="fa-li"><i class="fas fa-clipboard-list"></i></span> จำนวนสินค้าทั้งหมด : 500</li>
+                                                                        <li class="small"><span class="fa-li"><i class="	fas fa-hand-holding-usd"></i></span> คงเหลือ : 234 </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-5 text-center">
+                                                                    <img src="https://image.makewebeasy.net/makeweb/0/ncwkrdzPi/DefaultData/%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%A3%E0%B8%A7%E0%B8%A1_RB019___1_.jpg" alt="user-avatar" class="img-circle img-fluid">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <div class="text-right">
+                                                                <a type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal"><i class="fas fa-boxes"></i> &nbsp; แก้ไขข้อมูล</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- /.card-body -->
+                                        <div class="card-footer">
+                                            <nav aria-label="Contacts Page Navigation">
+                                                <ul class="pagination justify-content-center m-0">
+                                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                        <!-- /.card-footer -->
+                                    </div>
+                                </header>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+</div>
+<!-- /.content-wrapper -->
+
+<!-- ./wrapper -->

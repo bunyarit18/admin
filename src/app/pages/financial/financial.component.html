@@ -1,0 +1,314 @@
+<div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-green navbar-light">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+        </ul>
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="../../../app/dashboard/index/index.component.html" class="brand-link">
+            <img src="../../../assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+            <span class="brand-text font-weight-light"> RONGRAM </span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Sidebar user (optional) -->
+            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                <div class="image">
+                    <img src="../../../assets/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                </div>
+                <div class="info">
+                    <a href="#" class="d-block"> Bunyarit Thongsuk </a>
+                </div>
+            </div>
+
+
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <!-- Add icons to the links using the .nav-icon class
+with font-awesome or any other icon font library -->
+                    <li class="nav-item">
+                        <a href="/dashboard" class="nav-link">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                หน้าหลัก
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/calendar" class="nav-link">
+                            <i class="nav-icon fas fa-edit"></i>
+                            <p>
+                                การจัดการห้องพัก
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/room" class="nav-link">
+                            <i class="nav-icon fas fa-table"></i>
+                            <p>
+                                ข้อมูลห้องพัก
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/staff" class="nav-link">
+                            <i class="nav-icon fas fa-columns"></i>
+                            <p>
+                                การจัดการพนักงาน
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/customer" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p>
+                                ข้อมูลลูกค้า
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/financial" class="nav-link active">
+                            <i class="nav-icon fas fa-chart-pie"></i>
+                            <p>
+                                ข้อมูลการเงิน
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/treasury" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p>
+                                คลังสินค้า
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/list" class="nav-link">
+                            <i class="nav-icon fas fa-search"></i>
+                            <p>
+                                ประวัตการทำรายการ
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title"> ข้อมูลการเงิน</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="callout callout-info">
+                            <h5><i class="fas fa-info"></i> Note:</h5>
+                            This page has been enhanced for printing. Click the print button at the bottom of the invoice to test.
+                        </div>
+
+
+                        <!-- Main content -->
+                        <div class="invoice p-3 mb-3">
+                            <!-- title row -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <h4>
+                                        <i class="fas fa-globe"></i> RONGRAM
+                                        <small class="float-right">Date: 2/10/2014</small>
+                                    </h4>
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- info row -->
+                            <div class="row invoice-info">
+                                <div class="col-sm-4 invoice-col">
+                                    From
+                                    <address>
+                            <strong>RONGRAM</strong><br>
+                            795 Folsom Ave, Suite 600<br>
+                            San Francisco, CA 94107<br>
+                            Phone: 093-702XXXX<br>
+                            Email: RONGRAM@gmail.com
+                          </address>
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-sm-4 invoice-col">
+                                    To
+                                    <address>
+                            <strong>บุญฤทธิ์ ทองสุข</strong><br>
+                            Room Type : Superior <br>
+                            Room : 048 <br>
+                            Check in  : 13/6/2564 <br>
+                            Check out : 15/6/2564
+                          </address>
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-sm-4 invoice-col">
+                                    <b>Invoice #007612</b><br>
+                                    <br>
+                                    <b>Order ID:</b> 4F3S8J<br>
+                                    <b>Payment Due:</b> 2/22/2014<br>
+                                    <b>Account:</b> 968-34567
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+
+                            <!-- Table row -->
+                            <div class="row">
+                                <div class="col-12 table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Qty</th>
+                                                <th>Product</th>
+                                                <th>Serial #</th>
+                                                <th>Description</th>
+                                                <th>Subtotal</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>ห้องพัก Superior </td>
+                                                <td>455-981-221</td>
+                                                <td>ห้องพักจำนวน 2 วัน 2 คืน</td>
+                                                <td>2400 THB.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>ผลไม้รวม</td>
+                                                <td>247-925-726</td>
+                                                <td>สินค้าบริโภคภายในห้องพัก</td>
+                                                <td>300 THB.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Coca Cola</td>
+                                                <td>735-845-642</td>
+                                                <td>สินค้าบริโภคภายในห้องพัก</td>
+                                                <td>150 THB.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+
+                            <div class="row">
+                                <!-- accepted payments column -->
+                                <div class="col-6">
+                                    <p class="lead">Payment Methods:</p>
+                                    <img src="../../../assets/img/credit/visa.png" alt="Visa">&nbsp;
+                                    <img src="../../../assets/img/credit/mastercard.png" alt="Mastercard">&nbsp;
+                                    <img src="../../../assets/img/credit/american-express.png" alt="American Express">&nbsp;
+                                    <img src="../../../assets/img/credit/paypal2.png" alt="Paypal">
+
+                                    <p class="text-muted well well-sm shadow-none" style="margin-top: 10px;">
+                                        Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
+                                    </p>
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-6">
+                                    <p class="lead">Amount Due 2/22/2014</p>
+
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <tr>
+                                                <th style="width:50%">Subtotal:</th>
+                                                <td>2850 THB.</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tax (9.3%)</th>
+                                                <td>200 THB.</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>Total:</th>
+                                                <td>2850 THB.</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+
+                            <!-- this row will not appear when printing -->
+                            <div class="row no-print">
+                                <div class="col-12">
+                                    <a href="invoice-print.html" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a>
+                                    <button type="button" class="btn btn-success float-right"><i class="far fa-credit-card"></i> Submit
+                            Payment
+                          </button>
+                                    <button type="button" class="btn btn-primary float-right" style="margin-right: 5px;">
+                            <i class="fas fa-download"></i> Generate PDF
+                          </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.invoice -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+</div>
+
+
+
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../../../../src/assets/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../../../src/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../../../src/assets/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../../../src/assets/js/demo.js"></script>
